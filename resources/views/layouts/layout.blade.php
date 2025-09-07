@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>@yield('title', 'My Portfolio')</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
     <!-- Font Awesome CDN -->
     <!-- Try jsDelivr -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+    
 
 
 </head>
@@ -30,7 +32,6 @@
         <x-nav-link href="/about"  :active="request()->is('about')">ABOUT</x-nav-link>
         <x-nav-link href="/contact"  :active="request()->is('contact')">CONTACT</x-nav-link>
         <x-nav-link href="/projects"  :active="request()->is('projects')">PROJECTS</x-nav-link>
-        <x-nav-link href="/education"  :active="request()->is('education')">EDUCATION</x-nav-link>
       </div>
 
       <!-- Right: Icons + CTA -->
@@ -56,7 +57,7 @@
     </div> --}}
   </header>
   <main class="flex-1"> 
-      {{ $slot }}
+      @yield('content')
   </main>
 
   <footer class="bg-gray-900 text-white py-4 text-center">

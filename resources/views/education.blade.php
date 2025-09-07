@@ -1,14 +1,17 @@
-<x-layout>
-    <x-slot name="heading">Education Page</x-slot>
+@extends('layouts.layout')
+
+@section('title', 'About Me')
+
+@section('content')
 
         <section class="py-16 bg-white">
             <div class="max-w-6xl mx-auto px-6 text-center">
                 <!-- Section Heading -->
-                <h2 class="text-3xl font-bold text-gray-800">MY EDUCATION</h2>
+                <h2 class="text-3xl font-bold text-gray-800">MY EDUCATIONAL JOURNEY</h2>
                 <div class="w-16 h-1 bg-blue-500 mx-auto mt-2 mb-6"></div>
-                <p class="text-gray-600 max-w-3xl mx-auto">
+                {{-- <p class="text-gray-600 max-w-3xl mx-auto">
                 Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-                </p>
+                </p> --}}
 
                 <!-- Cards -->
                 <div class="mt-12 flex flex-wrap justify-center gap-8">
@@ -51,4 +54,4 @@
         .delay-300 { animation-delay: 0.3s; }
         </style>
 
-</x-layout>
+@endsection

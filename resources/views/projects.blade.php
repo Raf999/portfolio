@@ -1,4 +1,9 @@
-<x-layout>
+@extends('layouts.layout')
+
+@section('title', 'Projects')
+
+@section('content')
+
     <x-slot name="heading">Projects Page</x-slot>
     <section class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-6 text-center">
@@ -12,11 +17,11 @@
     </section>
     <div class="bg-gray-50 min-h-screen flex flex-col items-center py-10">
         <!-- Card Grid -->
-        <div class="grid gap-6 px-6 w-full max-w-7xl
-                    grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            @foreach ($projects as $project)       
+        <div class="flex flex-wrap justify-center gap-6 px-6 w-full max-w-7xl mx-auto">
+            @foreach ($projects as $project)
             <!-- Card 1 -->
-            <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-4 flex flex-col">
+            <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-4 flex flex-col
+                w-full sm:w-72 md:w-80 lg:w-96">
             <img src="{{ $project->image_url }}" alt="Project Image" class="rounded-lg mb-4 object-cover h-48 w-full">
             <span class="text-xs uppercase tracking-wide text-gray-500">{{ $project->category }}</span>
             <h3 class="text-lg font-semibold text-gray-800 mt-1">{{ $project->title }}</h3>
@@ -39,4 +44,4 @@
         </button>
     </div>
 
-</x-layout>
+@endsection

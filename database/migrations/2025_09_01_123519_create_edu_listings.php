@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('degree');
             $table->date('start_date');
             $table->date('end_date')->nullable();
+            $table->string('icon_url')->nullable();
             $table->timestamps();
         });
     }
